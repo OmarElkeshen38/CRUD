@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUD</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body class="bg-black">
+        <div class="form w-100 bg-black py-5">
+            <div class="w-75 text-white mx-auto">
+                <label for="productName" class="my-2">Product Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="productName" placeholder="ex : Dell">
+                <div id="nameAlert" class="alert alert-warning p-2 mt-2 d-none">Name should start with capital letter</div>
+                <label for="productPrice" class="my-2">Product Price <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="productPrice" placeholder="ex : 9999">
+                <div id="priceAlert" class="alert alert-warning p-2 mt-2 d-none">number from 100 to 999999)</div>
+                <label for="productCaregory" class="my-2">Product Category <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="productCaregory" placeholder="ex : laptop">
+                <div id="categoryAlert" class="alert alert-warning p-2 mt-2 d-none">category should be valid</div>
+                <label for="productDesc" class="my-2">Product Description</label>
+                <textarea class="form-control" id="productDesc"></textarea>
+                <button disabled id="addBtn" class="btn btn-dark mt-3 float-end">Add Product</button>
+                <div class="clearfix"></div>
+                
+                <input onkeyup="search(this.value)" type="text" class="form-control my-4" placeholder="search by name ..">
+                
+                <div class="table-responsive">
+                    <table class="table text-white text-center">
+                        <thead>
+                            <th>Product Name</th>
+                            <th>Product Price</th>
+                            <th>Product Caregory</th>
+                            <th>Product Description</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </thead>
+                        <tbody id="tableBody" class="text-white-50">
+                
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

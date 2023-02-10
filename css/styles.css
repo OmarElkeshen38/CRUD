@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+}
+
+
+.container {
+    overflow-x: auto;
+}
+
+*::selection {
+    background-color: rgb(255, 238, 0);
+    color: #000;
+}
+
+*::-webkit-scrollbar {
+    height: 2px;
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 238, 0);
+    border-radius: 5px;
+}
